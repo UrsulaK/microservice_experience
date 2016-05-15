@@ -3,11 +3,8 @@ package de.uk.source.administration.service;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import static springfox.documentation.builders.PathSelectors.regex;
-import org.springframework.context.annotation.ComponentScan;
-
+import static com.google.common.base.Predicates.*;
 import com.google.common.base.Predicate;
-
-import de.uk.source.administration.service.rest.SourceAdministrationController;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
@@ -46,6 +43,8 @@ public class SourceAdministrationApplication {
     }
 
 	private Predicate<String> sourceAdministrationPaths() {
-        return regex("/source");
+        return or(regex("/source"),
+        		regex("/author"),
+    	        regex("/work"));
     }
 }
