@@ -1,8 +1,8 @@
 package de.uk.source.administration.service.model;
 
-public class Work extends Node{
+public class Source extends Node{
 
-	public Work(String title, Author author){
+	public Source(String title, Author author){
 		super();
 		setLabel("Work");
 		setTile(title);

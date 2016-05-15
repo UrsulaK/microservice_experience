@@ -1,48 +1,15 @@
 package de.uk.source.administration.service.model;
 
-public class Citation {
+public class Citation extends Node{
 
-	String quoteText;
-	String authorSurname;
-	String authorForename;
-	String workTitle;
-	public Citation(){
-		
-	}
-	public String getQuoteText() {
-		return quoteText;
-	}
-
-	public void setQuoteText(String quoteText) {
-		this.quoteText = quoteText;
+	public Citation(String text, Source source){
+		super();
+		addLabel("Citation");
+		Relation relation = new Relation("EXTRACTED_FROM",source);
+		addRelation(relation);
+		addProperty("citation", text);
+		String timeStamp = String.valueOf(System.currentTimeMillis());
+		addProperty("date", timeStamp);
 	}
 
-	public String getAuthorSurname() {
-		return authorSurname;
-	}
-
-	public void setAuthorSurname(String authorSurname) {
-		this.authorSurname = authorSurname;
-	}
-
-	public String getAuthorForename() {
-		return authorForename;
-	}
-
-	public void setAuthorForename(String authorForename) {
-		this.authorForename = authorForename;
-	}
-
-	public String getWorkTitle() {
-		return workTitle;
-	}
-
-	public void setWorkTitle(String workTitle) {
-		this.workTitle = workTitle;
-	}
-
-	
-	
-	
-	
 }

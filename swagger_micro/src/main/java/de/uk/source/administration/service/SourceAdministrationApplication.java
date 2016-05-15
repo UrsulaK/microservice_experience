@@ -17,7 +17,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableSwagger2
-@ComponentScan(basePackageClasses = {SourceAdministrationController.class})
 public class SourceAdministrationApplication {
 	
 	public static void main(String[] args){
@@ -38,8 +37,8 @@ public class SourceAdministrationApplication {
                 .title("Source Administration API")
                 .description("The Source Administration API provides an interface to manage your bibliographical"
                 		+ "references.")
-                .termsOfServiceUrl("http://www.urakel.de")
-                .contact(new Contact("UK", "www.urakel.de", "ursula@urakel.de"))
+                .termsOfServiceUrl("http://www.uk.de")
+                .contact(new Contact("UK", "www.uk.de", "ursula@uk.de"))
                 .license("Apache License Version 2.0")
                 .licenseUrl("https://github.com/UrsulaK/microservice_experience/LICENSE")
                 .version("0.1.0")
