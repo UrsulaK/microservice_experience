@@ -1,6 +1,6 @@
 # microservice_experience
 
-Here's my playgraund to gather experiences in developing microservices, unknown frameworks and much more.
+Here's my playground to gather experiences in developing microservices, using unknown frameworks and much more.
 
 ## swagger_micro
 I want to develop a service which which helps me to manage my literature sources like books, pdf's, websites ... It should 
